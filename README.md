@@ -222,5 +222,3 @@ This project demonstrates:
 - React component composition
 - Responsive UI design
 - Full-stack integration
-
-Built with ❤️ for Full Stack Engineering Internship
