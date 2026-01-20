@@ -1,0 +1,81 @@
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.status-badge::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: currentColor;
+  opacity: 0.7;
+}
+
+.status-pending {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: #92400e;
+  border-color: rgba(146, 64, 14, 0.2);
+}
+
+.status-assigned {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  color: #1e40af;
+  border-color: rgba(30, 64, 175, 0.2);
+}
+
+.status-accepted {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  color: #166534;
+  border-color: rgba(22, 101, 52, 0.2);
+}
+
+.status-in-progress {
+  background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%);
+  color: #0277bd;
+  border-color: rgba(2, 119, 189, 0.2);
+}
+
+.status-completed {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.status-cancelled {
+  background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
+  color: #991b1b;
+  border-color: rgba(153, 27, 27, 0.2);
+}
+
+.status-rejected {
+  background: linear-gradient(135deg, #fed7d7 0%, #feb2b2 100%);
+  color: #c53030;
+  border-color: rgba(197, 48, 48, 0.2);
+}
+
+.status-no-show {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  color: #475569;
+  border-color: rgba(71, 85, 105, 0.2);
+}
+
+.status-default {
+  background-color: #e9ecef;
+  color: #495057;
+}

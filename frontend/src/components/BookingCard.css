@@ -1,0 +1,93 @@
+.booking-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+.booking-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3182ce, #38a169, #d69e2e);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.booking-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+}
+
+.booking-card:hover::before {
+  opacity: 1;
+}
+
+.booking-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.booking-card-header h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #1a202c;
+  font-weight: 600;
+  letter-spacing: -0.25px;
+}
+
+.booking-card-body {
+  margin-bottom: 20px;
+}
+
+.booking-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.booking-info .label {
+  font-weight: 500;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.booking-info .value {
+  color: #1e293b;
+  text-align: right;
+  font-weight: 500;
+}
+
+.booking-card-footer {
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-card-footer small {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 400;
+}
